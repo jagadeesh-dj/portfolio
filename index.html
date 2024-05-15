@@ -391,14 +391,14 @@
         </div>
         
     </section>
-    <!-- <div class="footer-menu">
+    <div class="footer-menu">
         <div id="theme">
             <i class="fa-solid fa-moon fa-sm" style="color: black;"></i>
         </div>
-        <div id="scroll">
+        <!-- <div id="scroll">
             <i class="fa-solid fa-up-long fa-sm" style="color: black;"></i>
-        </div>
-    </div> -->
+        </div> -->
+    </div>
     <footer>
         <small>CopyRights <i class="fa-regular fa-copyright fa-lg"></i> 2024 by @dj | All Rights Reserved </small>
     </footer>
@@ -464,6 +464,18 @@
         });
         data.reset()
         
+    })
+
+    let darks=document.querySelector('.fa-moon')
+    let mode=document.getElementById('theme')
+    let root=document.querySelector(':root')
+    mode.addEventListener('click',(e)=>{
+        console.log('clicked')
+        darks.classList.toggle('fa-moon')
+        darks.classList.toggle('fa-sun')
+        document.body.classList.toggle('darktheme')
+        const change=document.body.getAttribute('class')==='darktheme' ? 'black' : 'white';
+        root.style.setProperty('--background',change)
     })
     
     
