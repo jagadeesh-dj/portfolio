@@ -39,7 +39,7 @@
     </div> -->
     <section id="home">
         <div class="profile">
-            <div class="social-media">
+            <div class="social-media" id="togg">
                 <div>
                     <a href="https://www.linkedin.com/in/jagadeesh-d-7258b8296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin-in fa-lg "></i></a>
 
@@ -467,9 +467,11 @@
     })
 
     let darks=document.querySelector('.fa-moon')
+    let socialmedia=document.querySelector('#togg')
     let mode=document.getElementById('theme')
     let root=document.querySelector(':root')
     mode.addEventListener('click',(e)=>{
+        socialmedia.classList.toggle('social-media2')
         console.log('clicked')
         darks.classList.toggle('fa-moon')
         darks.classList.toggle('fa-sun')

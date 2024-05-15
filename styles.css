@@ -134,7 +134,7 @@ header{
     /* background: red; */
     width: 35px;
     height: 35px;
-    border: 1px solid  black;
+    border: 1px solid black;
     border-radius: 50%;
 }
 .social-media div a{
@@ -147,6 +147,30 @@ header{
     background-color: blueviolet;
 }
 
+
+
+.social-media2 div a{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    /* background: red; */
+    width: 35px;
+    height: 35px;
+    border: 1px solid  white;
+    border-radius: 50%;
+}
+.social-media2 div a{
+    color: white;
+}
+
+.social-media2 div a:hover{
+    position: relative;
+    color: white;
+    background-color: blueviolet;
+}
 /*  about page properties */
 
 .aboutme{
