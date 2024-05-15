@@ -381,7 +381,7 @@
                         <input type="text" id="mailsub" placeholder="Subject">
                     </div>
                     <div>
-                        <textarea name="" id="" placeholder="Enter Your Message" required></textarea>
+                        <textarea name="" id="msg" placeholder="Enter Your Message" required></textarea>
                     </div>
                     <div>
                         <button class="send-btn">Send Message</button>
@@ -462,7 +462,11 @@
         .then(function (message) {
             alert("mail sent successfully")
         });
-        name.value=""
+        document.getElementById('name').vlaue=""
+        document.getElementById('mail').vlaue=""
+        document.getElementById('mailsub').vlaue=""
+        document.getElementById('msg').vlaue=""
+
 
     })
     
