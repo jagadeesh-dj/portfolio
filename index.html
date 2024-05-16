@@ -412,7 +412,6 @@
         bar.classList.toggle('fa-xmark')
         menus.classList.toggle('active')
         let menuclose=document.querySelectorAll('.portlink')
-        console.log(menuclose)
         menuclose.forEach(val=>{
             val.addEventListener('click',(e)=>{
                 console.log('clicked')
@@ -441,28 +440,33 @@
     setInterval(effect,12000)
 
     const sendbtn=document.querySelector('.send-btn')
-    const data=document.querySelector('#formdata')
+    let data=document.querySelector('#formdata')
     sendbtn.addEventListener('click',(e)=>{
         e.preventDefault();
-        console.log('clicked')
+
+    
         let name=data.elements[0].value
         let mail=data.elements[1].value
         let sub=data.elements[2].value
         let msg=data.elements[3].value
-        console.log(name,mail,sub,msg)
-        Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "jagadeesh2002d@gmail.com",
-                Password: "2DF2883AD800D7FCDF70DCADDFBDF4A8737C",
-                To: "jagadeesh2002d@gmail.com",
-                From: "jagadeesh2002d@gmail.com",
-                Subject: sub,
-                Body: "sender mail"+" "+ mail+" "+"sender name"+" "+name+" "+msg,
-        })
-        .then(function (message) {
-            alert("mail sent successfully")
-        });
-        data.reset()
+        if (name==="" || mail==="" || msg===""){
+            alert('Please fill the text fields')
+        }
+        else{
+            Email.send({
+                    Host: "smtp.elasticemail.com",
+                    Username: "jagadeesh2002d@gmail.com",
+                    Password: "2DF2883AD800D7FCDF70DCADDFBDF4A8737C",
+                    To: "jagadeesh2002d@gmail.com",
+                    From: "jagadeesh2002d@gmail.com",
+                    Subject: sub,
+                    Body: "sender mail"+" "+ mail+" "+"sender name"+" "+name+" "+msg,
+            })
+            .then(function (message) {
+                alert("mail sent successfully")
+            });
+            data.reset()
+        }
         
     })
 
@@ -479,8 +483,6 @@
         const change=document.body.getAttribute('class')==='darktheme' ? 'black' : 'white';
         root.style.setProperty('--background',change)
     })
-    
-    
     
 </script>
 </html>
