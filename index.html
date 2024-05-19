@@ -483,6 +483,10 @@
         const change=document.body.getAttribute('class')==='darktheme' ? 'black' : 'white';
         root.style.setProperty('--background',change)
     })
+
+    document.addEventListener("contextmenu",(e)=>{
+        e.preventDefault();
+    })
     
 </script>
 </html>
