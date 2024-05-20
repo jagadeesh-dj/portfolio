@@ -16,9 +16,11 @@
 }
 :root{
     --background: white;
+    --color:black;
 }
 html{
     overflow-x: hidden;
+    height: -webkit-fill-available;
 }
 body::-webkit-scrollbar{
     width: 5px;
@@ -42,7 +44,7 @@ header{
     align-items: center;
     padding: 1rem 5rem;
     z-index: 100;
-    background-color: rgb(244, 247, 248);
+    background-color: var(--background);
 }
 #menus ul li{
     display: inline-block;
@@ -51,7 +53,7 @@ header{
 }
 
 #menus ul li a{
-    color: black;
+    color: var(--color);
 }
 .logo h1{
     /* font-size: x-large; */
@@ -244,6 +246,8 @@ header{
     justify-content: center;
     align-items: center;
     column-gap: 35px;
+    flex-wrap: wrap;
+    row-gap: 20px;
 }
 .icon{
     display: none;
@@ -256,6 +260,8 @@ header{
     height: 300px;
     border-radius: 10px;
     text-align: center;
+    background-color: white;
+    color: black;
 }
 .comb{
     margin-top: 5px;
@@ -349,6 +355,8 @@ svg{
     height: 300px;
     border-radius: 10px;
     text-align: center;
+    background-color: white;
+    color: black;
 }
 .python{
     animation: animi4 2s linear forwards;
@@ -385,6 +393,8 @@ svg{
 }
 .ai{
     position: relative;
+    background-color: white;
+    color: black;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 0.5rem 0.5rem;
     width: 310px;
@@ -446,11 +456,13 @@ svg{
 .cards{
     padding-top: 5rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 25px;
 }
 .card1{
+    flex-grow: 0;
     display: flex;
     align-items: flex-end;
     position: relative;
@@ -588,7 +600,9 @@ footer{
     display: grid;
     justify-content: center;
     align-items: center;
-    background-color: gainsboro;
+    background-color: var(--background);
+    border-top: 1px solid var(--color);
+    color: var(--color);
 }
 .footer-menu{
     position: fixed;
@@ -634,11 +648,14 @@ footer{
         position: fixed;
         top: 0%;
         padding: 0.5rem 1rem;
+        background-color: var(--background);
+        color: var(--color);
     }
  
     .icon{
         display: block;
         cursor: pointer;
+        color: var(--color);
     }
     #menus ul{
         display: flex;
@@ -653,7 +670,7 @@ footer{
         right: 0%;
         width: 100%;
         text-align: center;
-        background-color: rgb(244, 247, 248);
+        background-color: var(--background);
         z-index: 1; 
         display: none;
     }
@@ -810,3 +827,4 @@ footer{
         right: 1rem;
     } 
 }
+

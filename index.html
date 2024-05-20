@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Dj-Portfolio</title>
 </head>
-<body>
+<body >
     <header>
         <div class="logo">
             <h1>Dj</h1>
@@ -25,7 +25,7 @@
             </ul>
         </div>
         <div class="icon">
-            <i class="fa-solid fa-bars fa-xl" style="color: #020203;"></i>
+            <i class="fa-solid fa-bars fa-xl"></i>
         </div>
     </header>
     <!-- <div class="hidden" id="mobile-menu">
@@ -481,12 +481,15 @@
         darks.classList.toggle('fa-sun')
         document.body.classList.toggle('darktheme')
         const change=document.body.getAttribute('class')==='darktheme' ? 'black' : 'white';
+        const change2=document.body.getAttribute('class')==='darktheme' ? 'white' : 'black';
         root.style.setProperty('--background',change)
+        root.style.setProperty('--color',change2)
     })
 
     document.addEventListener("contextmenu",(e)=>{
         e.preventDefault();
     })
+   
     
 </script>
 </html>
