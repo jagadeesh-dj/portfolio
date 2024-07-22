@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -39,7 +40,7 @@
     </div> -->
     <section id="home">
         <div class="profile">
-            <div class="social-media" id="togg">
+            <div class="social-media" id="togg" data-aos="fade-right">
                 <div>
                     <a href="https://www.linkedin.com/in/jagadeesh-d-7258b8296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin-in fa-lg "></i></a>
 
@@ -57,14 +58,14 @@
                 </div>
 
             </div>
-            <div class="content">
+            <div class="content" data-aos="fade-down">
                 <h3>Hi Myself</h3>
                 <h1>JAGADEESH</h1>
                 <h3 id="typing">I am a <span id="animi">Software Developer</span></h3>
                 <p>This is my official portfolio website to showcase all my details.</p>
                 <a href="#contact"><button class="profile-btn">Hire Me</button></a>
             </div>
-            <div class="profile-image">
+            <div class="profile-image" data-aos="fade-up">
                 <img src="profile.png" alt="picture">
             </div>
         </div>
@@ -402,6 +403,10 @@
     <footer>
         <small>CopyRights <i class="fa-regular fa-copyright fa-lg"></i> 2024 by @dj | All Rights Reserved </small>
     </footer>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
 </body>
 <script src="https://smtpjs.com/v3/smtp.js">
 </script>
